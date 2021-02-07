@@ -58,49 +58,49 @@ print(now)
 print(now.date())
 
 
-# class Record:
-#     def add_record():
-#         amount = []
+class Record:
+    def add_record():
+        amount = []
     
-#     date = now.date()
+    date = now.date()
 
 
-# class Calculator:
-#     limit = 1000
-#     Record
+class Calculator:
+    limit = 1000
+    Record
 
-#     def get_today_stats():
-#         for i in amount:
-#             pass
+    def get_today_stats():
+        for i in amount:
+            pass
 
-# #    def get_week_stats():
-# #        pass
+#    def get_week_stats():
+#        pass
 
-#     # def get_remained():
-#     #     pass
-
-
-# class Calories_Calculator(Calculator):
-#     def get_calories_remained():
-#         if get_today_stats() < limit :
-#             print(f'ты можешь съесть ещё {limit - get_today_stats} кКал')
-#         else:
-#             print('хватит есть!')
+    # def get_remained():
+    #     pass
 
 
-# class Cash_Calculator(Calculator):
-#     def __init__(self, rub):
-#         self.RUB = rub
-#         self.USD_RATE = rub * 0.013
-#         self.EUR_RATE = rub * 0.011
+class Calories_Calculator(Calculator):
+    def get_calories_remained():
+        if get_today_stats() < limit :
+            print(f'ты можешь съесть ещё {limit - get_today_stats} кКал')
+        else:
+            print('хватит есть!')
+
+
+class Cash_Calculator(Calculator):
+    def __init__(self, rub):
+        self.RUB = rub
+        self.USD_RATE = rub * 0.013
+        self.EUR_RATE = rub * 0.011
         
-#         def get_today_cash_remained():
-#             if get_today_stats() < limit :
-#                 print(f'на сегодня осталось{round(limit - get_today_stats, 2)}')
-#             if get_today_stats() == limit:
-#                 print('деньги закончились((')
-#             if get_today_stats() > limit:
-#                 print(f'деньги закончились, а твой долг:{round(get_today_stats - limit, 2)}')
+        def get_today_cash_remained():
+            if get_today_stats() < limit :
+                print(f'на сегодня осталось{round(limit - get_today_stats, 2)}')
+            if get_today_stats() == limit:
+                print('деньги закончились((')
+            if get_today_stats() > limit:
+                print(f'деньги закончились, а твой долг:{round(get_today_stats - limit, 2)}')
 
 
 
