@@ -9,6 +9,7 @@ class Calc():
         self.records=[]
         self.limit = limit
 
+
     def get_today_stats(self):
         today = dt.datetime.now().date()
 #        print(self.records)
