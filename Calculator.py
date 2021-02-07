@@ -41,13 +41,6 @@ print(c.get_week_stats())
 print(f'total {c.get_today_stats()}')
 print(f'remained =  {c.remained()}')
 
-
-
-
-
-
-
-
 date_format = '%d.%m.%Y'
 moment = dt.datetime.strptime('07.02.2021', date_format)
 print(moment)
