@@ -4,8 +4,7 @@ class Calc():
     
     def add_record(self, in_value, in_date = dt.datetime.now().date() ):
         self.records.append((in_value,in_date))
-        
-    
+            
     def __init__(self, limit):
         self.records=[]
         self.limit = limit
@@ -44,7 +43,6 @@ print(f'remained =  {c.remained()}')
 date_format = '%d.%m.%Y'
 moment = dt.datetime.strptime('07.02.2021', date_format)
 print(moment)
-
 
 day = moment.date
 print(day)
