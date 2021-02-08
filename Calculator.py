@@ -39,15 +39,17 @@ class Calculator():
 
     def remained(self):
         return self.limit - self.get_today_stats()
+    
 
 
 class Calories_Calculator(Calculator):
 
     def get_calories_remained(self):
         if self.get_today_stats() < self.limit :
-            print(f'ты можешь съесть ещё {remained()} кКал')
+            print(f'ты можешь съесть ещё {self.remained()} кКал')
         else:
             print('хватит есть!')
+        return 0
 
 
 class Cash_Calculator(Calculator):
@@ -57,12 +59,12 @@ class Cash_Calculator(Calculator):
         self.USD_RATE = rub * 0.013
         self.EUR_RATE = rub * 0.011
         
-        def get_today_cash_remained(self):
-            if self.get_today_stats() < self.limit :
-                print(f'на сегодня осталось{remained()}')
-            if self.get_today_stats() == self.limit:
-                print('деньги закончились((')
-            if self.get_today_stats() > self.limit:
-                print(f'деньги закончились, а твой долг:{remained() * (-1)}')
-                
-                
+    def get_today_cash_remained(self):
+        if self.remained() > 0 :
+            print(f'на сегодня осталось{self.remained()}')
+        if self.get_today_stats() == self.limit:
+            print('деньги закончились((')
+        if self.get_today_stats() > self.limit:
+            print(f'деньги закончились, а твой долг:{self.remained() * (-1)}')
+            
+            
