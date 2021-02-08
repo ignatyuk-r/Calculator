@@ -64,13 +64,5 @@ class Cash_Calculator(Calculator):
                 print('деньги закончились((')
             if self.get_today_stats() > self.limit:
                 print(f'деньги закончились, а твой долг:{remained() * (-1)}')
-
-
-# c = Calc(100)
-# c.add_record(10)
-# c.add_record(30)
-# print(c.get_week_stats())
-
-# print(f'total {c.get_today_stats()}')
-# print(f'remained =  {c.remained()}')
-# print (get_today_cash_remained())
+                
+                
